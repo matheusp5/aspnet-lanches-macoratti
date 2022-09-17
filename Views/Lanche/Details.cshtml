@@ -1,0 +1,10 @@
+@model Lanche
+
+<img src="@Model.ImagemUrl" alt="@Model.Nome" class="text-center">
+
+<h3>@Model.Nome</h3>
+<p>@Model.DescricaoDetalhada</p>
+<div class="btn-group">
+    <a asp-controller="Lanche" asp-action="List" class="btn btn-info">Ver todos os lanches</a>
+    <a asp-controller="CarrinhoCompra" asp-action="AdicionarItemNoCarrinhoCompra" asp-route-id="@Model.LancheId" class="btn btn-primary">Adicionar @Model.Nome ao carrinho</a>
+</div>

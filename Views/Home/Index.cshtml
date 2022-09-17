@@ -1,0 +1,16 @@
+﻿@model HomeViewModel
+
+@{
+    ViewBag.Title = "Inicio";
+}
+
+<partial name="_Carousel"/>
+
+<h2 class="mt-5">Os preferidos da semana...</h2>
+
+<div class="row">
+    @foreach (var item in Model.LanchesPreferidos)
+    {
+        <partial name="_LanchesResumo" for="@item"/>
+    }
+</div>
